@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Nunito", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+body #header {
+  width: 100%;
+  height: 13%;
+  background-color: #4894a7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 0 2.5rem;
+}
+body #header h1 {
+  font-size: 2.7rem;
+}
+body #header .right .material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-size: 3rem;
+  border: 3px solid #fff;
+  border-radius: 60%;
+  cursor: pointer;
+}
+body #header .right #first-popup {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 11.5%;
+  right: 3rem;
+  background-color: #d2d2d2;
+  border-radius: 0.4rem;
+  padding: 1rem 5.4rem 2.4rem 1rem;
+  gap: 1.2rem;
+}
+body #header .right #first-popup span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+body #header .right #account-popup {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 11.5%;
+  right: 3rem;
+  background-color: #d2d2d2;
+  border-radius: 0.4rem;
+  padding: 1.8rem;
+  gap: 2rem;
+}
+body #header .right #account-popup .row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+body #header .right #account-popup .row h2 {
+  font-size: 1.6rem;
+}
+body #header .right #account-popup .row span {
+  font-size: 1.2rem;
+}
+body #header .right #account-popup .row input {
+  border: none;
+  padding: 0.7rem 0.7rem;
+  border-radius: 0.4rem;
+  display: none;
+}
+body #header .right #account-popup .row button {
+  padding: 0.8rem 1.3rem;
+  border: none;
+  border-radius: 2rem;
+  background-color: #4894a7;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: "Nunito", system-ui, -apple-system, Roboto;
+}
+body #header .right #account-popup .row #save-account-btn {
+  display: none;
+}
+body #header .right #account-popup .row #cancel-edition-btn {
+  display: none;
+}
+body #content {
+  flex: 1;
+  width: 100%;
+  background-color: #eeeeee;
+  display: grid;
+  place-items: center;
+}
+body #content #card {
+  width: 65%;
+  height: 70%;
+  padding: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+body #content #card .module {
+  display: none;
+  width: 25%;
+  height: 45%;
+  box-shadow: 0 0 2px #003846;
+  border-radius: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  color: #00566b;
+  cursor: pointer;
+  background-color: #f5f5f5;
+}
+body #content #card .module .material-symbols-outlined {
+  font-size: 5rem;
+}
+body #content #card .module h3 {
+  font-size: 1.3rem;
+}
+
+#snackbar {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.7rem 1rem;
+  font-size: 1.1rem;
+  color: #fff;
+  border-radius: 0.6rem;
+  background-color: #313131;
+}
+#snackbar button {
+  padding: 0.5rem 1.1rem;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Nunito", system-ui, -apple-system, Roboto;
+  border-radius: 0.2rem;
+}
+#snackbar button:hover {
+  background-color: rgba(167, 167, 167, 0.1215686275);
+}
+
+#delete-account-dialog {
+  display: none;
+  flex-direction: column;
+  background-color: #717171;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  gap: 3.2rem;
+  color: #fff;
+  border-radius: 1rem;
+}
+#delete-account-dialog .actions {
+  display: flex;
+  justify-content: space-around;
+}
+#delete-account-dialog .actions button {
+  padding: 0.9rem 1.3rem;
+  border-radius: 0.7rem;
+  border: none;
+  cursor: pointer;
+}

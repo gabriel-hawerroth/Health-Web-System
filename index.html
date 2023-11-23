@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vital Medical</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="assets/user-nurse-solid.svg" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/7967e71da6.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="left-side sign-in">
+    <h1>Faça seu cadastro!</h1>
+    <span>Ainda não possui cadastro em nosso site?</span>
+    <button id="redirect-to-sign-up" onclick="redirectToSignUp()">Criar conta</button>
+  </div>
+
+  <div class="left-side sign-up">
+    <h1>Bem vindo!</h1>
+    <span>Já possui cadastro em nosso site?</span>
+    <button id="redirect-to-sign-in" onclick="redirectToSignIn()">Fazer login</button>
+  </div>
+
+  <div class="right-side sign-in">
+    <h1>Bem vindo de volta</h1>
+    <form>
+      <input type="text" placeholder="E-mail" required id="emailInput" autocomplete="off" />
+      <input type="password" placeholder="Senha" required id="passwordInput" autocomplete="new-password" />
+      <div class="remember-me">
+        <input type="checkbox" id="remember-me-id" />
+        <span>Lembrar-me</span>
+      </div>
+    </form>
+    <button onclick="login()">Entrar</button>
+  </div>
+
+  <div class="right-side sign-up">
+    <h1>Crie sua conta</h1>
+    <form class="sign-up-form">
+      <input type="text" class="register-input" placeholder="Nome" required maxlength="50" />
+      <input type="number" class="register-input" placeholder="Idade" required max="130" />
+      <input type="email" class="register-input" placeholder="E-mail" required autocomplete="off" maxlength="40" />
+      <input type="text" maxlength="11" class="register-input" placeholder="CPF" required />
+      <input type="password" class="register-input" placeholder="Senha" required autocomplete="new-password"
+        maxlength="80" />
+      <input type="password" class="register-input" placeholder="Confirme a senha" required autocomplete="new-password"
+        maxlength="80" />
+    </form>
+    <button onclick="createAccount()">Cadastrar</button>
+  </div>
+</body>
+
+<div id="snackbar">
+  <span id="message"></span>
+  <button onclick="closeMessage()">OK</button>
+</div>
+
+</html>

@@ -1,0 +1,8 @@
+{
+    "editor.formatOnSave": true,
+    "liveSassCompile.settings.excludeList": [
+        "**/node_modules/**",
+        ".vscode/**",
+        "**/*.map" // Adicione essa linha para excluir a geração de arquivos .map
+    ],
+}

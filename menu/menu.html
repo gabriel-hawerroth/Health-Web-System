@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vital Medical</title>
+  <link rel="stylesheet" href="menu.css" />
+  <script src="menu.js"></script>
+  <link rel="shortcut icon" href="../assets/user-nurse-solid.svg" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/7967e71da6.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+  <div id="header">
+    <h1>Vital Medical</h1>
+
+    <div class="right">
+      <span class="material-symbols-outlined" id="user-icon" onclick="popup()">person</span>
+
+      <div id="first-popup">
+        <span onclick="accountPopup(true)">Sua conta</span>
+        <span onclick="logout()">Sair</span>
+      </div>
+
+      <div id="account-popup">
+        <div class="row">
+          <h2>Sua conta</h2>
+
+          <span id="user-name" style="margin-top: 0.4rem;"></span>
+          <input type="text" class="account-input" id="name-input" placeholder="Nome" maxlength="50">
+        </div>
+
+        <div class="row">
+          <span id="user-age"></span>
+          <input type="text" class="account-input" id="age-input" placeholder="Idade" style="width: 30%;" max="130">
+
+          <span id="user-email"></span>
+          <input type="email" class="account-input" id="email-input" placeholder="E-mail" style="width: 70%;"
+            autocomplete="off" maxlength="40">
+        </div>
+
+        <div class="row">
+          <span id="user-cpf"></span>
+          <input type="text" class="account-input" id="cpf-input" placeholder="CPF" maxlength="11">
+
+          <span id="user-password" style="margin-left: 1.5rem;"></span>
+          <input type="password" autocomplete="new-password" class="account-input" id="password-input"
+            placeholder="Senha" maxlength="80">
+        </div>
+
+        <div class="row" style="justify-content: space-evenly !important; margin-top: .8rem;">
+          <button id="edit-account-btn" onclick="showEditAccount()">Editar</button>
+          <button id="save-account-btn" onclick="saveAccount()">Salvar alterações</button>
+          <button id="cancel-edition-btn" onclick="cancelAccountEdition()">Cancelar</button>
+          <button id="delete-account-btn" onclick="confirmAccountDelete(true)">Excluir conta</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="content">
+    <div id="card">
+      <div class="module" id="schedule-consultation"
+        onclick="pageRedirection('agendamento-consultas/agendamento.html')">
+        <span class="material-symbols-outlined">edit_calendar</span>
+        <h3>Agende sua consulta</h3>
+      </div>
+
+      <div class="module" id="access-consultation" onclick="pageRedirection('acesse-sua-consulta/consulta.html')">
+        <span class="material-symbols-outlined">manage_search</span>
+        <h3>Acesse sua consulta</h3>
+      </div>
+
+      <div class="module" id="triage" onclick="pageRedirection('triagem/triagem.html')">
+        <span class="material-symbols-outlined">monitor_heart</span>
+        <h3>Triagem</h3>
+      </div>
+
+      <div class="module" id="doctor-register" onclick="pageRedirection('cadastro-de-medicos/medicos.html')">
+        <span class="material-symbols-outlined">stethoscope</span>
+        <h3>Cadastro de médicos</h3>
+      </div>
+
+      <div class="module" id="patient-register" onclick="pageRedirection('cadastro-de-pacientes/pacientes.html')">
+        <span class="material-symbols-outlined">groups</span>
+        <h3>Cadastro de pacientes</h3>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<div id="snackbar">
+  <span id="message"></span>
+  <button onclick="closeMessage()">OK</button>
+</div>
+
+
+<div id="delete-account-dialog">
+  <h2>Tem certeza de que deseja excluir sua conta?</h2>
+  <div class="actions">
+    <button onclick="deleteAccount()">Confirmar</button>
+    <button onclick="confirmAccountDelete(false)">Cancelar</button>
+  </div>
+</div>
+
+</html>

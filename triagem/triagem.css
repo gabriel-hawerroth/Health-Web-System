@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Nunito", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+body #header {
+  width: 100%;
+  height: 13%;
+  background-color: #4894a7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 0 2.5rem;
+}
+body #header h1 {
+  font-size: 2.7rem;
+}
+body #header .material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-size: 3rem;
+  border: 3px solid #fff;
+  border-radius: 60%;
+}
+body .arrow-back {
+  position: absolute;
+  top: 16%;
+  left: 1.5%;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.3rem;
+}
+body .arrow-back:hover {
+  background-color: rgba(186, 186, 186, 0.2784313725);
+  border-radius: 50%;
+}
+body .content {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  background-color: #eeeeee;
+}
+body .content .card {
+  background-color: #fff;
+  width: 55%;
+  height: 75%;
+  border-radius: 2rem;
+  box-shadow: 0 0 2px #003846;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .content .card h1 {
+  font-size: 2.4rem;
+  padding: 1.3rem 0;
+}
+body .content .card .card-content {
+  display: flex;
+  width: 100%;
+  flex: 1;
+}
+body .content .card .card-content .esquerda {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+body .content .card .card-content .esquerda .first-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  bottom: 0.8rem;
+}
+body .content .card .card-content .esquerda .first-row .material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+  color: #4894a7;
+  font-size: 2.5rem;
+  margin-left: 1.5rem;
+  border-radius: 50%;
+  border: 3px solid #4894a7;
+}
+body .content .card .card-content .esquerda .first-row select {
+  width: 50%;
+}
+body .content .card .card-content .esquerda .row {
+  width: 100%;
+  display: flex;
+  padding: 0.6rem 0;
+}
+body .content .card .card-content .esquerda .row .input-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .content .card .card-content .esquerda .row .input-content input {
+  padding: 0.7rem 0.5rem;
+  border-radius: 0.4rem;
+  border: 1px solid #757575;
+}
+body .content .card .card-content .esquerda .row select {
+  padding: 0.7rem 0.5rem;
+  border-radius: 0.4rem;
+}
+body .content .card .card-content .esquerda .row select option {
+  padding: 0.5rem 0 !important;
+}
+body .content .card .card-content .direita {
+  flex: 1;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+body .content .card .card-content .direita #status-form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 2rem;
+}
+body .content .card .card-content .direita #status-form label {
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.7rem;
+}
+body .content .card .card-content .direita #status-form label input[type=radio] {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: 3px solid #000;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 15px;
+  position: relative;
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+}
+body .content .card .card-content .direita #status-form label input[type=radio]:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 25px;
+  content: "";
+  display: block;
+  position: relative;
+  left: 2.6px;
+  top: 2.5px;
+}
+body .content .card .card-content .direita #status-form #status-1 input[type=radio] {
+  border-color: red;
+}
+body .content .card .card-content .direita #status-form #status-1 input[type=radio]:checked:after {
+  background-color: red !important;
+}
+body .content .card .card-content .direita #status-form #status-2 input[type=radio] {
+  border-color: orange;
+}
+body .content .card .card-content .direita #status-form #status-2 input[type=radio]:checked:after {
+  background-color: orange !important;
+}
+body .content .card .card-content .direita #status-form #status-3 input[type=radio] {
+  border-color: yellow;
+}
+body .content .card .card-content .direita #status-form #status-3 input[type=radio]:checked:after {
+  background-color: yellow !important;
+}
+body .content .card .card-content .direita #status-form #status-4 input[type=radio] {
+  border-color: green;
+}
+body .content .card .card-content .direita #status-form #status-4 input[type=radio]:checked:after {
+  background-color: green !important;
+}
+body .content .card .card-content .direita #status-form #status-5 input[type=radio] {
+  border-color: blue;
+}
+body .content .card .card-content .direita #status-form #status-5 input[type=radio]:checked:after {
+  background-color: blue !important;
+}
+body .content .card #confirmar-triagem-btn {
+  margin: 1rem 0;
+  padding: 0.8rem 1.3rem;
+  border: none;
+  border-radius: 2rem;
+  background-color: #4894a7;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: "Nunito", system-ui, -apple-system, Roboto;
+}
+
+#snackbar {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.7rem 1rem;
+  font-size: 1.1rem;
+  color: #fff;
+  border-radius: 0.6rem;
+  background-color: #313131;
+}
+#snackbar button {
+  padding: 0.5rem 1.1rem;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Nunito", system-ui, -apple-system, Roboto;
+  border-radius: 0.2rem;
+}
+#snackbar button:hover {
+  background-color: rgba(167, 167, 167, 0.1215686275);
+}

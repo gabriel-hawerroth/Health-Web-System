@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Nunito", -apple-system, system-ui, Roboto;
+  font-size: 16px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+body #header {
+  width: 100%;
+  height: 13%;
+  background-color: #4894a7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 0 2.5rem;
+}
+body #header h1 {
+  font-size: 2.7rem;
+}
+body #header .material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-size: 3rem;
+  border: 3px solid #fff;
+  border-radius: 60%;
+}
+body .arrow-back {
+  position: absolute;
+  top: 16%;
+  left: 1.5%;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.3rem;
+}
+body .arrow-back:hover {
+  background-color: rgba(186, 186, 186, 0.2784313725);
+  border-radius: 50%;
+}
+body .content {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  background-color: #eeeeee;
+}
+body .content .card {
+  background-color: #fff;
+  width: 55%;
+  height: 75%;
+  border-radius: 2rem;
+  box-shadow: 0 0 2px #003846;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .content .card h1 {
+  font-size: 2.4rem;
+  padding: 1.3rem 0;
+}
+body .content .card .card-content {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+body .content .card .card-content .select-content {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+body .content .card .card-content .select-content label {
+  margin-left: 1rem;
+}
+body .content .card .card-content .select-content select {
+  padding: 0.7rem 0.5rem;
+  border-radius: 0.4rem;
+}
+body .content .card .card-content .select-content select option {
+  padding: 0.5rem 0 !important;
+}
+body .content .card .card-content .select-content input {
+  padding: 0.7rem 0.5rem;
+  border-radius: 0.4rem;
+  border: 1px solid #757575;
+}
+body .content .card .card-content #content-select-paciente {
+  display: none;
+}
+body .content .card button {
+  margin: 1.3rem 0;
+  padding: 0.8rem 1.3rem;
+  border: none;
+  border-radius: 2rem;
+  background-color: #4894a7;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: "Nunito", system-ui, -apple-system, Roboto;
+}
+
+#snackbar {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.7rem 1rem;
+  font-size: 1.1rem;
+  color: #fff;
+  border-radius: 0.6rem;
+  background-color: #313131;
+}
+#snackbar button {
+  padding: 0.5rem 1.1rem;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Nunito", system-ui, -apple-system, Roboto;
+  border-radius: 0.2rem;
+}
+#snackbar button:hover {
+  background-color: rgba(167, 167, 167, 0.1215686275);
+}
