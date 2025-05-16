@@ -1,7 +1,7 @@
 var user = {};
 const listaPacientes = [];
 
-const serverUrl = "http://localhost:3000";
+const serverUrl = "http://localhost:8083";
 
 user = JSON.parse(atob(localStorage.getItem("user")));
 

@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-const serverUrl = "http://localhost:3000";
+const serverUrl = "http://localhost:8083";
 
 // conecta com o servidor do mysql
 function connectToMySQL() {

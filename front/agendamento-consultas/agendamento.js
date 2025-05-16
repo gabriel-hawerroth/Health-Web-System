@@ -1,7 +1,7 @@
 var user = {};
 var patient = null;
 
-const serverUrl = "http://localhost:3000";
+const serverUrl = "http://localhost:8083";
 
 var pacientes = [];
 var medicos = [];
